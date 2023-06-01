@@ -11,7 +11,7 @@ np.random.seed = 42
 train_data = pd.read_csv("lending_train.csv")
 test_data = pd.read_csv("lending_topredict.csv")
 
-print(train_data.shape)
+print("data read")
 
 ids = train_data["ID"]
 
@@ -22,7 +22,6 @@ test_ids = test_data["ID"]
 del test_data["ID"]
 
 
-print(train_data)
 train_data = train_data[['loan_duration','debt_to_income_ratio','fico_score_range_high','fico_score_range_low','requested_amnt','home_ownership_status','annual_income',
                          'employment_verified','total_revolving_limit','fico_inquired_last_6mths','loan_paid']]
 test_data = test_data[['loan_duration','debt_to_income_ratio','fico_score_range_high','fico_score_range_low','requested_amnt','home_ownership_status','annual_income',
